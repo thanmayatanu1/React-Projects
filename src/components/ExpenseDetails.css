@@ -1,0 +1,42 @@
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .expense-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 1rem;
+  }
+  
+  .expense-item div h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #2a2a2a;
+  }
+  
+  .expense-item div .expense-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .expense-item div .expense-details span {
+    font-size: 1.2rem;
+    color: #6b6b6b;
+  }
+  
+  .expense-item div .expense-details .expense-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2a2a2a;
+  }
