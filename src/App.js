@@ -1,4 +1,6 @@
-import ExpenseItem from './components/ExpenseItem'
+import ExpenseItem from './components/ExpenseItem';
+import NewExpense from './components/NewExpense/NewExpense';
+
 
 import './App.css';
 
@@ -13,6 +15,7 @@ const App = () => {
 
   return (
     <div>
+      <NewExpense />
       {expenses.map(expense => (
         <ExpenseItem
           key={expense.id}
