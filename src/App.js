@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import ExpenseItem from './components/ExpenseItem';
-import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 import './App.css';
 
 const DUMMY_EXPENSES = [
@@ -13,28 +12,16 @@ const DUMMY_EXPENSES = [
 
 
 const App = () => {
-   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-  
-
-  const addExpenseHandler = expense => {
-  setExpenses(prevExpenses => {
-    return [expense, ...prevExpenses];
-  });
-
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
-
   return (
-    <div>
-      <Expenses/>
+    <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
-      {expenses.map(expense => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-        />
-      ))}
+      <Expenses expenses={expenses} />
     </div>
   );
 };
